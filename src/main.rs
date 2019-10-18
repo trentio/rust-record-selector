@@ -24,7 +24,10 @@ struct Album {
 }
 
 fn main() {
-    println!("{:?}", read_record_list().as_ref().map(|l| rnd_album(l)));
+    let list = read_record_list();
+    let choice = list.as_ref().map(|l| rnd_album(l));
+
+    println!("{:?}", choice);
 }
 
 
